@@ -13,7 +13,24 @@
 
 return [
      'db' => [
-        'driver' => 'Pdo',
-        'dsn'    => sprintf('sqlite:%s/data/zftutorial.db', realpath(getcwd())),
+         'adapters' => [
+             'testdb' => [
+                'driver' => 'Pdo_Mysql',
+                'database' => 'test',
+                'hostname' => 'localhost',
+             ],
+             'testdb2' => [
+                'driver' => 'Pdo_Mysql',
+                'database' => 'test2',
+                'hostname' => 'localhost',
+             ]
+         ],
+         'driver' => 'Pdo_Mysql'
     ],
+    
+//    'service_manager' => [
+//        'abstract_factories' => [
+//            \Zend\Db\Adapter\AdapterAbstractServiceFactory::class,
+//        ],
+//    ],
 ];

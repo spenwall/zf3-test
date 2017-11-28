@@ -6,7 +6,6 @@ use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\Db\Adapter\AdapterInterface;
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 class Module implements ConfigProviderInterface
 {
@@ -25,7 +24,7 @@ class Module implements ConfigProviderInterface
                     return new Model\AlbumTable($tableGateway);
                 },
                 Model\AlbumTableGateway::class => function ($container) {
-                    $dbAdapter = $container->get(AdapterInterface::class);
+                    $dbAdapter = $container->get('testdb2');
                     $resultSetPrototype = new ResultSet();
                     $resultSetPrototype->setArrayObjectPrototype(new Model\Album());
                     return new TableGateway('album', $dbAdapter, null, $resultSetPrototype);

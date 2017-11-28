@@ -31,14 +31,15 @@
     "autoload": {
         "psr-4": {
             "Application\\": "module/Application/src/",
-            "ZFT\\": "module/ZFT/src/",
-            "Album\\": "module/Album/src"
+            "Album\\": "module/Album/src",
+            "Blog\\": "module/Blog/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "ApplicationTest\\": "module/Application/test/",
-            "ZFTTest\\": "module/ZFT/test/"
+            "Album\\": "module/Album/src",
+            "Blog\\": "module/Album/src"
         }
     },
     "extra": [],

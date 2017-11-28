@@ -26,6 +26,6 @@ return [
     'Zend\Router',
     'Zend\Validator',
     'Application',
-    'ZFT',
     'Album',
+    'Blog',
 ];
