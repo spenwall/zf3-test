@@ -14,14 +14,19 @@
 return [
      'db' => [
          'adapters' => [
-             'testdb' => [
+             'zftutorial' => [
                 'driver' => 'Pdo_Mysql',
-                'database' => 'test',
+                'database' => 'zftutorial',
                 'hostname' => 'localhost',
              ],
              'testdb2' => [
                 'driver' => 'Pdo_Mysql',
                 'database' => 'test2',
+                'hostname' => 'localhost',
+             ],
+             'shared' => [
+                'driver' => 'Pdo_Mysql',
+                'database' => 'wstar_shared',
                 'hostname' => 'localhost',
              ]
          ],

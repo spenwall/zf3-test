@@ -32,14 +32,16 @@
         "psr-4": {
             "Application\\": "module/Application/src/",
             "Album\\": "module/Album/src",
-            "Blog\\": "module/Blog/src"
+            "Blog\\": "module/Blog/src",
+            "Database\\": "module/Database/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "ApplicationTest\\": "module/Application/test/",
             "Album\\": "module/Album/src",
-            "Blog\\": "module/Album/src"
+            "Blog\\": "module/Blog/src",
+            "Database\\": "module/Databse/src"
         }
     },
     "extra": [],
