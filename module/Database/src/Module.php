@@ -12,14 +12,15 @@ class Module implements ConfigProviderInterface
         return include __DIR__.'/../config/module.config.php';
     }
  
-    // public function getControllerConfig()
-    // {
-    //     return [
-    //         'factories' => [
-    //             Controller\DatabaseController::class => function($container) {
-    //                 return new Controller\DatabaseController();
-    //             },
-    //         ],
-    //     ];
-    // }
+    public function getServiceConfig()
+    {
+        return [
+            'factories' => [
+                Model\AddonProducts::class => function($container) {
+                    $dbAdapter = $container->get('shared');
+                    return new Model\AddonProducts($dbAdapter);
+                },
+            ],
+        ];
+    }
 }

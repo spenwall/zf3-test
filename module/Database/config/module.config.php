@@ -26,9 +26,19 @@ return [
         ],
     ],
 
-    'controllers' => [
+    'service_manager' => [
         'factories' => [
-            Controller\DatabaseController::class => InvokableFactory::class,
+           Model\AddonProducts::class => Factory\ModelFactory::class, 
+        ],
+        'abstract_factories' => [
+            Factory\LazyTableFactory::class,
+        ]
+
+    ],
+
+    'controllers'  => [
+        'factories' => [
+            Controller\DatabaseController::class => Factory\DatabaseControllerFactory::class,
         ],
     ],
     
